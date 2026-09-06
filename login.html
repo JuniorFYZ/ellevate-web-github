@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="robots" content="noindex,nofollow">
+  <link rel="icon" href="assets/logos/logo.png" type="image/png">
+  <title>Iniciar Sesión — Ellevate Inc.</title>
+  
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    body {
+      font-family: 'Inter', sans-serif;
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background: #f2ede8;
+      position: relative;
+      overflow: hidden;
+      padding: 20px;
+    }
+
+    body::before {
+      content: '';
+      position: fixed;
+      top: -200px; right: -200px;
+      width: 600px; height: 600px;
+      border-radius: 50%;
+      background: radial-gradient(circle, rgba(180,155,120,0.18) 0%, transparent 70%);
+    }
+    body::after {
+      content: '';
+      position: fixed;
+      bottom: -150px; left: -150px;
+      width: 500px; height: 500px;
+      border-radius: 50%;
+      background: radial-gradient(circle, rgba(180,155,120,0.12) 0%, transparent 70%);
+    }
+
+    .login-wrapper {
+      width: 100%;
+      max-width: 440px;
+      position: relative;
+      z-index: 10;
+    }
+
+    .login-brand {
+      text-align: center;
+      margin-bottom: 28px;
+    }
+    .login-brand img {
+      height: 60px;
+      width: auto;
+      margin: 0 auto 12px;
+      display: block;
+    }
+    .login-brand h1 {
+      font-family: 'Playfair Display', serif;
+      font-size: 26px;
+      font-weight: 700;
+      color: #1a1a1a;
+      letter-spacing: 0.04em;
+    }
+    .login-brand p {
+      font-size: 13px;
+      color: #777;
+      margin-top: 4px;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+    }
+
+    .login-card {
+      background: #ffffff;
+      border-radius: 12px;
+      box-shadow: 0 4px 30px rgba(0, 0, 0, 0.08);
+      border: 1px solid rgba(180, 155, 120, 0.25);
+      padding: 38px 32px;
+    }
+
+    .form-group {
+      margin-bottom: 20px;
+    }
+    .form-group label {
+      display: block;
+      font-size: 12px;
+      font-weight: 600;
+      color: #444;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      margin-bottom: 8px;
+    }
+    .form-group input {
+      width: 100%;
+      padding: 13px 16px;
+      border: 1.5px solid #d8d3c9;
+      border-radius: 6px;
+      font-size: 14px;
+      font-family: 'Inter', sans-serif;
+      outline: none;
+      transition: border-color 0.2s, box-shadow 0.2s;
+    }
+    .form-group input:focus {
+      border-color: #bfa980;
+      box-shadow: 0 0 0 3px rgba(191, 169, 128, 0.2);
+    }
+
+    .btn-login {
+      width: 100%;
+      padding: 14px;
+      background: #1a1a1a;
+      color: #ffffff;
+      font-family: 'Inter', sans-serif;
+      font-size: 13px;
+      font-weight: 600;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      border: none;
+      border-radius: 6px;
+      cursor: pointer;
+      transition: background 0.2s, transform 0.15s;
+      margin-top: 8px;
+    }
+    .btn-login:hover {
+      background: #333333;
+      transform: translateY(-1px);
+    }
+
+    .login-footer {
+      text-align: center;
+      margin-top: 24px;
+      font-size: 13px;
+    }
+    .login-footer a {
+      color: #8a7350;
+      text-decoration: none;
+      font-weight: 500;
+    }
+    .login-footer a:hover {
+      text-decoration: underline;
+    }
+
+    .demo-notice {
+      background: #f8f6f0;
+      border: 1px solid #e0d7c3;
+      border-radius: 6px;
+      padding: 12px 14px;
+      font-size: 12px;
+      color: #635338;
+      margin-bottom: 20px;
+      line-height: 1.5;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="login-wrapper">
+    <div class="login-brand">
+      <img src="assets/logos/logo.png" alt="Ellevate Inc.">
+      <h1>Panel Administrativo</h1>
+      <p>Acceso Seguro</p>
+    </div>
+
+    <div class="login-card">
+      <div class="demo-notice">
+        ℹ️ <strong>Modo Estático:</strong> En este despliegue de GitHub Pages, esta pantalla muestra el diseño de acceso corporativo.
+      </div>
+
+      <form id="loginForm">
+        <div class="form-group">
+          <label for="usuario">Usuario</label>
+          <input type="text" id="usuario" placeholder="Ingresa tu usuario" value="admin" required>
+        </div>
+
+        <div class="form-group">
+          <label for="contrasena">Contraseña</label>
+          <input type="password" id="contrasena" placeholder="••••••••" value="admin123" required>
+        </div>
+
+        <button type="submit" class="btn-login">Ingresar al sistema</button>
+      </form>
+
+      <div id="loginFeedback" style="margin-top:16px;"></div>
+    </div>
+
+    <div class="login-footer">
+      <a href="index.html">← Regresar al sitio web principal</a>
+    </div>
+  </div>
+
+  <script>
+    document.getElementById('loginForm').addEventListener('submit', (e) => {
+      e.preventDefault();
+      const feedback = document.getElementById('loginFeedback');
+      feedback.innerHTML = `
+        <div style="background:#f0fdf4;border:1px solid #86efac;color:#166534;padding:12px;border-radius:6px;font-size:13px;text-align:center;">
+          ✅ Credenciales verificadas en demo. En el servidor PHP/MySQL con XAMPP, esto ingresa al panel <code>admin/</code>.
+        </div>
+      `;
+    });
+  </script>
+</body>
+</html>
