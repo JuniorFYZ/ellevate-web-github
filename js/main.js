@@ -132,7 +132,7 @@ document.addEventListener('DOMContentLoaded', () => {
         `📌 Asunto: ${asunto}\n` +
         `💬 Mensaje: ${mensaje}`
       );
-      const waUrl = `https://wa.me/18098783355?text=${waText}`;
+      const waUrl = `https://wa.me/18099783355?text=${waText}`;
 
       // Mostrar confirmación interactiva
       if (alertContainer) {
